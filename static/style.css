@@ -1,0 +1,22 @@
+/* Кастомные стили */
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  margin-bottom: 1rem;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .jumbotron {
+      padding: 1rem;
+  }
+}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Форма для ввода данных{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Форма для ввода данных</h1>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="hh-tab" data-bs-toggle="tab" data-bs-target="#hh" type="button">HeadHunter</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="github-tab" data-bs-toggle="tab" data-bs-target="#github" type="button">GitHub</button>
+    </li>
+</ul>
+
+<div class="tab-content p-3 border border-top-0 rounded-bottom">
+    <!-- Форма для HH -->
+    <div class="tab-pane fade show active" id="hh" role="tabpanel">
+        <form>
+            <div class="mb-3">
+                <label for="hhQuery" class="form-label">Поисковый запрос</label>
+                <input type="text" class="form-control" id="hhQuery" placeholder="Например: Python developer">
+            </div>
+            <div class="mb-3">
+                <label for="hhArea" class="form-label">Регион</label>
+                <select class="form-select" id="hhArea">
+                    <option value="1">Москва</option>
+                    <option value="2">Санкт-Петербург</option>
+                    <option value="3">Екатеринбург</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="hhExperience" class="form-label">Опыт работы</label>
+                <select class="form-select" id="hhExperience">
+                    <option value="noExperience">Нет опыта</option>
+                    <option value="between1And3">От 1 года до 3 лет</option>
+                    <option value="between3And6">От 3 до 6 лет</option>
+                    <option value="moreThan6">Более 6 лет</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Найти вакансии</button>
+        </form>
+    </div>
+
+    <!-- Форма для GitHub -->
+    <div class="tab-pane fade" id="github" role="tabpanel">
+        <form>
+            <div class="mb-3">
+                <label for="githubRepo" class="form-label">Репозиторий</label>
+                <input type="text" class="form-control" id="githubRepo" placeholder="Например: django/django">
+            </div>
+            <div class="mb-3">
+                <label for="githubBranch" class="form-label">Ветка</label>
+                <input type="text" class="form-control" id="githubBranch" placeholder="Например: main">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="githubIncludeForks">
+                <label class="form-check-label" for="githubIncludeForks">Включать форки</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Анализировать</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

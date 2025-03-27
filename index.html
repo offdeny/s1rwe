@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Добро пожаловать!</h1>
+    <p class="lead">Это главная страница моего проекта для парсинга HH и GitHub.</p>
+    <hr class="my-4">
+    <p>Используйте меню для навигации по сайту.</p>
+    <a class="btn btn-primary btn-lg" href="/form" role="button">Перейти к форме</a>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Парсер HH</h5>
+                <p class="card-text">Соберите информацию о вакансиях с HeadHunter.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Парсер GitHub</h5>
+                <p class="card-text">Анализируйте репозитории на GitHub.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
